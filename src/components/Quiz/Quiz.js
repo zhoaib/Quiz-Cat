@@ -1,12 +1,16 @@
 import React from 'react';
+import './Quiz.css'
 
 const Quiz = ({ quiz }) => {
     const { id, name, logo, total, } = quiz
     return (
         <div>
             <img src={logo} alt="" />
-            <h2>{name}</h2>
+            <div className='quiz-name'>
+                <h2>Name: {name}</h2>
+                <h4>Total: {total}</h4>
 
+            </div>
         </div>
     );
 };
