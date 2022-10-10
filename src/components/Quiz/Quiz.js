@@ -4,7 +4,7 @@ import './Quiz.css'
 const Quiz = ({ quiz }) => {
     const { id, name, logo, total, } = quiz
     return (
-        <div>
+        <div className='quiz'>
             <img src={logo} alt="" />
             <div className='quiz-name'>
                 <h2>Name: {name}</h2>
