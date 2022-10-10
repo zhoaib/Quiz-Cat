@@ -6,6 +6,7 @@ import Statistics from './components/Statistics/Statistics'
 import Blog from './components/Blog/Blog'
 
 import Main from './layout/Main';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const router = createBrowserRouter([
@@ -31,6 +32,10 @@ function App() {
 
 
       ]
+    },
+    {
+      path: '*',
+      element: <NotFound></NotFound>
     }
   ])
   return (
