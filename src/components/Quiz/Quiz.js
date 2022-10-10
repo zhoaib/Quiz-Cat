@@ -8,7 +8,7 @@ const Quiz = ({ quiz }) => {
             <img src={logo} alt="" />
             <div className='quiz-name'>
                 <h2>Name: {name}</h2>
-                <h4>Total: {total}</h4>
+                <button>Start Quiz</button>
 
             </div>
         </div>
