@@ -7,8 +7,8 @@ const Quiz = ({ quiz }) => {
         <div className='quiz'>
             <img src={logo} alt="" />
             <div className='quiz-name'>
-                <h2>Name: {name}</h2>
-                <button>Start Quiz</button>
+                <h3> {name}</h3>
+                <button className='quiz-btn'>Start Quiz</button>
 
             </div>
         </div>
