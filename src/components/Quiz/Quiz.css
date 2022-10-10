@@ -27,3 +27,8 @@
     border-radius: 20px;
     height: 40px;
 }
+
+.quiz-btn:hover {
+    background-color: #626268;
+    cursor: pointer;
+}
