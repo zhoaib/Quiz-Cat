@@ -2,6 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './SingleQuiz.css'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const SingleQuiz = ({ singlequiz }) => {
 
@@ -10,39 +14,48 @@ const SingleQuiz = ({ singlequiz }) => {
 
     const btnAnsClick = (correctAnswer) => {
         if (correctAnswer === correctAnswer) {
-            alert(correctAnswer)
+
+            toast(correctAnswer)
+
         }
     }
 
     const btnOptClick = (option) => {
         if (option === correctAnswer && correctAnswer === correctAnswer) {
-            alert('Your Answer is Right!!!')
+
+            toast.success('Your Answer is Right!!!')
+
         }
         else {
-            alert('Wrong Answer :(')
+
+            toast.error('Wrong Answer :(')
+
         }
     }
 
     return (
-        <div>
+        <>
+            <div>
 
-            <div className='ques-ans'>
-                <button className='eye' onClick={() => btnAnsClick(correctAnswer)}><FontAwesomeIcon
-                    icon={faEye}
+                <div className='ques-ans'>
+                    <button className='eye' onClick={() => btnAnsClick(correctAnswer)}><FontAwesomeIcon
+                        icon={faEye}
 
-                ></FontAwesomeIcon></button>
+                    ></FontAwesomeIcon></button>
 
-                <h3>{question.slice(3, -4)}</h3>
+                    <h3>{question.slice(3, -4)}</h3>
 
 
-                <div className='ans'>
-                    {options.map(option => <button onClick={() => btnOptClick(option)} key={id} className='option-btn'><input type="radio" />{option}</button>)}
+                    <div className='ans'>
+                        {options.map(option => <button onClick={() => btnOptClick(option)} key={id} className='option-btn'>{option}</button>)}
+                    </div>
                 </div>
+
+
+
             </div>
-
-
-
-        </div>
+            <ToastContainer />
+        </>
     );
 };
 
