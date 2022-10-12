@@ -1,10 +1,19 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Chart from '../Chart/Chart';
 import './Statistics.css'
 
 const Statistics = () => {
+    const data = useLoaderData();
+
     return (
         <div>
-            <h2>This is statistics</h2>
+            {
+                data.data.map(chart => <Chart
+                    key={chart.id}
+                    chart={chart}
+                ></Chart>)
+            }
         </div>
     );
 };
