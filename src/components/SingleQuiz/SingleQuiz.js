@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SingleQuiz = ({ singlequiz }) => {
 
+
+
     const { options, question, id, correctAnswer, } = singlequiz;
 
 
@@ -36,6 +38,7 @@ const SingleQuiz = ({ singlequiz }) => {
     return (
         <>
             <div>
+
 
                 <div className='ques-ans'>
                     <button className='eye' onClick={() => btnAnsClick(correctAnswer)}><FontAwesomeIcon
