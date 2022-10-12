@@ -1,13 +1,19 @@
 import React from 'react';
+import './SingleQuiz.css'
 
 const SingleQuiz = ({ singlequiz }) => {
-    const { options, question, } = singlequiz
+
+    const { options, question, id, correctAnswer, } = singlequiz
     return (
         <div>
 
-            <p>{question.slice(3, -4)}</p>
+            <div className='ques-ans'>
+                <h3>{question.slice(3, -4)}</h3>
 
-            {options.map(option => <button className='option-btn'><input type="radio" />{option}</button>)}
+                <div className='ans'>
+                    {options.map(option => <button key={id} className='option-btn'><input type="radio" />{option}</button>)}
+                </div>
+            </div>
 
 
 
