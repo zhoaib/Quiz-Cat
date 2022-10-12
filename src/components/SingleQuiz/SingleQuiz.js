@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './SingleQuiz.css'
 
@@ -25,7 +27,10 @@ const SingleQuiz = ({ singlequiz }) => {
         <div>
 
             <div className='ques-ans'>
-                <button onClick={() => btnAnsClick(correctAnswer)}>Answer</button>
+                <button className='eye' onClick={() => btnAnsClick(correctAnswer)}><FontAwesomeIcon
+                    icon={faEye}
+
+                ></FontAwesomeIcon></button>
 
                 <h3>{question.slice(3, -4)}</h3>
 

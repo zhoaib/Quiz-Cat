@@ -15,3 +15,24 @@
     background-color: antiquewhite;
     border-radius: 15px;
 }
+
+.eye {
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: rgb(230, 53, 53);
+}
+
+.eye:hover {
+    background-color: rgb(236, 128, 128);
+    cursor: pointer;
+}
+
+.option-btn {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.option-btn:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
