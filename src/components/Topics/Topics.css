@@ -6,3 +6,10 @@
 
     padding-top: 50px;
 }
+
+@media screen and (max-width:500px) {
+    .topic-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}

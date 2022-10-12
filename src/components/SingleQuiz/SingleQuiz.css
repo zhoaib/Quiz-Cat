@@ -36,3 +36,10 @@
     background-color: aliceblue;
     cursor: pointer;
 }
+
+@media screen and (max-width:578px) {
+    .ans {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
